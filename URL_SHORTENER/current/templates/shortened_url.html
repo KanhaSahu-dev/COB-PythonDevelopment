@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortened URL</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+
+        .content {
+            text-align: center;
+            margin-top: -105px; /* Adjust this value to move the content higher */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1 class="mt-4">Shortened URL</h1>
+        <p class="mt-3">It is here:</p>
+        <a href="{{ short_url }}" target="_blank" class="btn btn-success">{{ short_url }}</a>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

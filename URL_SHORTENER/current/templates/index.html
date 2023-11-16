@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <div class="text-center">
+        <h1>URL Shortener</h1>
+        <form method="POST" action="{{url_for('index')}}" class="mt-3">
+            <div class="form-group">
+                <input type="url" name="long_url" class="form-control" placeholder="Enter the long_url" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Shorten</button>
+            </div>
+        </form>
+
+        {% if short_url %}
+        <div class="mt-4 alert alert-success" role="alert">
+            <strong>Shortened URL:</strong> <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
